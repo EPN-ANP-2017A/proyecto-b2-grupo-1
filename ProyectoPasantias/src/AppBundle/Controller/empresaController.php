@@ -2,19 +2,135 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\empresa;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
 
+/**
+ * Empresa controller.
+ *
+ * @Route("empresa")
+ */
 class empresaController extends Controller
 {
     /**
-     * @Route("/empresa/registro")
+     * Lists all empresa entities.
+     *
+     * @Route("/", name="empresa_index")
+     * @Method("GET")
      */
-    public function registroAction()
+    public function indexAction()
     {
-        return $this->render('AppBundle:empresa:registro.html.twig', array(
-            // ...
+        $em = $this->getDoctrine()->getManager();
+
+        $empresas = $em->getRepository('AppBundle:empresa')->findAll();
+
+        return $this->render('empresa/index.html.twig', array(
+            'empresas' => $empresas,
         ));
     }
 
+    /**
+     * Creates a new empresa entity.
+     *
+     * @Route("/new", name="empresa_new")
+     * @Method({"GET", "POST"})
+     */
+    public function newAction(Request $request)
+    {
+        $empresa = new Empresa();
+        $form = $this->createForm('AppBundle\Form\empresaType', $empresa);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($empresa);
+            $em->flush();
+
+            return $this->redirectToRoute('empresa_show', array('id' => $empresa->getId()));
+        }
+
+        return $this->render('empresa/new.html.twig', array(
+            'empresa' => $empresa,
+            'form' => $form->createView(),
+        ));
+    }
+
+    /**
+     * Finds and displays a empresa entity.
+     *
+     * @Route("/{id}", name="empresa_show")
+     * @Method("GET")
+     */
+    public function showAction(empresa $empresa)
+    {
+        $deleteForm = $this->createDeleteForm($empresa);
+
+        return $this->render('empresa/show.html.twig', array(
+            'empresa' => $empresa,
+            'delete_form' => $deleteForm->createView(),
+        ));
+    }
+
+    /**
+     * Displays a form to edit an existing empresa entity.
+     *
+     * @Route("/{id}/edit", name="empresa_edit")
+     * @Method({"GET", "POST"})
+     */
+    public function editAction(Request $request, empresa $empresa)
+    {
+        $deleteForm = $this->createDeleteForm($empresa);
+        $editForm = $this->createForm('AppBundle\Form\empresaType', $empresa);
+        $editForm->handleRequest($request);
+
+        if ($editForm->isSubmitted() && $editForm->isValid()) {
+            $this->getDoctrine()->getManager()->flush();
+
+            return $this->redirectToRoute('empresa_edit', array('id' => $empresa->getId()));
+        }
+
+        return $this->render('empresa/edit.html.twig', array(
+            'empresa' => $empresa,
+            'edit_form' => $editForm->createView(),
+            'delete_form' => $deleteForm->createView(),
+        ));
+    }
+
+    /**
+     * Deletes a empresa entity.
+     *
+     * @Route("/{id}", name="empresa_delete")
+     * @Method("DELETE")
+     */
+    public function deleteAction(Request $request, empresa $empresa)
+    {
+        $form = $this->createDeleteForm($empresa);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->remove($empresa);
+            $em->flush();
+        }
+
+        return $this->redirectToRoute('empresa_index');
+    }
+
+    /**
+     * Creates a form to delete a empresa entity.
+     *
+     * @param empresa $empresa The empresa entity
+     *
+     * @return \Symfony\Component\Form\Form The form
+     */
+    private function createDeleteForm(empresa $empresa)
+    {
+        return $this->createFormBuilder()
+            ->setAction($this->generateUrl('empresa_delete', array('id' => $empresa->getId())))
+            ->setMethod('DELETE')
+            ->getForm()
+        ;
+    }
 }

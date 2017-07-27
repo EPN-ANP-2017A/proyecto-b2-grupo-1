@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Aplicacions list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Estado</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for aplicacion in aplicacions %}
+            <tr>
+                <td><a href="{{ path('aplicacion_show', { 'id': aplicacion.id }) }}">{{ aplicacion.id }}</a></td>
+                <td>{% if aplicacion.estado %}Yes{% else %}No{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('aplicacion_show', { 'id': aplicacion.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('aplicacion_edit', { 'id': aplicacion.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('aplicacion_new') }}">Create a new aplicacion</a>
+        </li>
+    </ul>
+{% endblock %}

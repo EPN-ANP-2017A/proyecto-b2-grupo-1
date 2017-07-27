@@ -36,25 +36,11 @@ class empresa
     private $direccionEmpresa;
 
     /**
-     * @var string
+     * @var int
      *
-     * @ORM\Column(name="telefono_empresa", type="string", length=15)
+     * @ORM\Column(name="telefono_empresa", type="integer")
      */
     private $telefonoEmpresa;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="usuario_empresa", type="string", length=50)
-     */
-    private $usuarioEmpresa;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="clave_empresa", type="string", length=254)
-     */
-    private $claveEmpresa;
 
     /**
      * @var string
@@ -62,6 +48,34 @@ class empresa
      * @ORM\Column(name="email_empresa", type="string", length=50)
      */
     private $emailEmpresa;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="usuario", type="string", length=50)
+     */
+    private $usuario;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="clave", type="string", length=255)
+     */
+    private $clave;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="requerimiento", type="string", length=255)
+     */
+    private $requerimiento;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="ruc", type="integer", unique=true)
+     */
+    private $ruc;
 
 
     /**
@@ -125,7 +139,7 @@ class empresa
     /**
      * Set telefonoEmpresa
      *
-     * @param string $telefonoEmpresa
+     * @param integer $telefonoEmpresa
      *
      * @return empresa
      */
@@ -139,59 +153,11 @@ class empresa
     /**
      * Get telefonoEmpresa
      *
-     * @return string
+     * @return int
      */
     public function getTelefonoEmpresa()
     {
         return $this->telefonoEmpresa;
-    }
-
-    /**
-     * Set usuarioEmpresa
-     *
-     * @param string $usuarioEmpresa
-     *
-     * @return empresa
-     */
-    public function setUsuarioEmpresa($usuarioEmpresa)
-    {
-        $this->usuarioEmpresa = $usuarioEmpresa;
-
-        return $this;
-    }
-
-    /**
-     * Get usuarioEmpresa
-     *
-     * @return string
-     */
-    public function getUsuarioEmpresa()
-    {
-        return $this->usuarioEmpresa;
-    }
-
-    /**
-     * Set claveEmpresa
-     *
-     * @param string $claveEmpresa
-     *
-     * @return empresa
-     */
-    public function setClaveEmpresa($claveEmpresa)
-    {
-        $this->claveEmpresa = $claveEmpresa;
-
-        return $this;
-    }
-
-    /**
-     * Get claveEmpresa
-     *
-     * @return string
-     */
-    public function getClaveEmpresa()
-    {
-        return $this->claveEmpresa;
     }
 
     /**
@@ -217,4 +183,101 @@ class empresa
     {
         return $this->emailEmpresa;
     }
+
+    /**
+     * Set usuario
+     *
+     * @param string $usuario
+     *
+     * @return empresa
+     */
+    public function setUsuario($usuario)
+    {
+        $this->usuario = $usuario;
+
+        return $this;
+    }
+
+    /**
+     * Get usuario
+     *
+     * @return string
+     */
+    public function getUsuario()
+    {
+        return $this->usuario;
+    }
+
+    /**
+     * Set clave
+     *
+     * @param string $clave
+     *
+     * @return empresa
+     */
+    public function setClave($clave)
+    {
+        $this->clave = $clave;
+
+        return $this;
+    }
+
+    /**
+     * Get clave
+     *
+     * @return string
+     */
+    public function getClave()
+    {
+        return $this->clave;
+    }
+
+    /**
+     * Set requerimiento
+     *
+     * @param string $requerimiento
+     *
+     * @return empresa
+     */
+    public function setRequerimiento($requerimiento)
+    {
+        $this->requerimiento = $requerimiento;
+
+        return $this;
+    }
+
+    /**
+     * Get requerimiento
+     *
+     * @return string
+     */
+    public function getRequerimiento()
+    {
+        return $this->requerimiento;
+    }
+
+    /**
+     * Set ruc
+     *
+     * @param integer $ruc
+     *
+     * @return empresa
+     */
+    public function setRuc($ruc)
+    {
+        $this->ruc = $ruc;
+
+        return $this;
+    }
+
+    /**
+     * Get ruc
+     *
+     * @return int
+     */
+    public function getRuc()
+    {
+        return $this->ruc;
+    }
 }
+

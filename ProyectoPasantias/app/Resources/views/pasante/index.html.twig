@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Pasantes list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombrepasante</th>
+                <th>Apellidopasante</th>
+                <th>Cedulapasante</th>
+                <th>Usuario</th>
+                <th>Clave</th>
+                <th>Especialidad</th>
+                <th>Universidad</th>
+                <th>Emailpasante</th>
+                <th>Telefonopasante</th>
+                <th>Conocimientos</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for pasante in pasantes %}
+            <tr>
+                <td><a href="{{ path('pasante_show', { 'id': pasante.id }) }}">{{ pasante.id }}</a></td>
+                <td>{{ pasante.nombrePasante }}</td>
+                <td>{{ pasante.apellidoPasante }}</td>
+                <td>{{ pasante.cedulaPasante }}</td>
+                <td>{{ pasante.usuario }}</td>
+                <td>{{ pasante.clave }}</td>
+                <td>{{ pasante.especialidad }}</td>
+                <td>{{ pasante.universidad }}</td>
+                <td>{{ pasante.emailPasante }}</td>
+                <td>{{ pasante.telefonoPasante }}</td>
+                <td>{{ pasante.conocimientos }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('pasante_show', { 'id': pasante.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('pasante_edit', { 'id': pasante.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('pasante_new') }}">Create a new pasante</a>
+        </li>
+    </ul>
+{% endblock %}
