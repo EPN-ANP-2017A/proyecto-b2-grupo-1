@@ -2,6 +2,8 @@
 
 namespace AppBundle\Entity;
 
+
+use AppBundle\AppBundle;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -28,6 +30,35 @@ class carrera
      */
     private $nombreCarrera;
 
+
+    /**
+     * @ORM\ManyToOne(targetEntity="solicitud", inversedBy="carreras")
+     * @ORM\JoinColumn(name="solicitud_id", referencedColumnName="id")
+     */
+    private $solicitudes;
+
+    /**
+     * Set solicitudes
+     * @param \AppBundle\Entity\solicitud $solicitudes
+     *
+     * @return solicitud
+     */
+    public function setSolicitudes(\AppBundle\Entity\solicitud $solicitudes)
+    {
+        $this->solicitudes = $solicitudes;
+        
+        return $this;
+    }
+
+    /**
+     * Get solicitudes
+     *
+     * @return \AppBundle\Entity\solicitud
+     */
+    public function getSolicitudes()
+    {
+        return $this->solicitudes;
+    }
 
     /**
      * Get id

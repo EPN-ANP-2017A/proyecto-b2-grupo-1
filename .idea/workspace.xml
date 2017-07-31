@@ -2,28 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="626eda09-685d-43eb-b7a4-e1ad8c0c911b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ProyectoPasantias/src/AppBundle/Controller/aplicacionController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ProyectoPasantias/src/AppBundle/Controller/carreraController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ProyectoPasantias/src/AppBundle/Controller/empresaController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ProyectoPasantias/src/AppBundle/Controller/indexController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ProyectoPasantias/src/AppBundle/Controller/pasanteController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ProyectoPasantias/src/AppBundle/Controller/solicitudController.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ProyectoPasantias/src/AppBundle/Entity/empresa.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ProyectoPasantias/src/AppBundle/Repository/empresaRepository.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ProyectoPasantias/src/AppBundle/Resources/views/aplicacion/visualizacionofertas.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ProyectoPasantias/src/AppBundle/Resources/views/carrera/creacion.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ProyectoPasantias/src/AppBundle/Resources/views/empresa/registro.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ProyectoPasantias/src/AppBundle/Resources/views/index/login.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ProyectoPasantias/src/AppBundle/Resources/views/pasante/registro.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ProyectoPasantias/src/AppBundle/Resources/views/solicitud/envio.html.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ProyectoPasantias/src/AppBundle/Tests/Controller/aplicacionControllerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ProyectoPasantias/src/AppBundle/Tests/Controller/carreraControllerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ProyectoPasantias/src/AppBundle/Tests/Controller/empresaControllerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ProyectoPasantias/src/AppBundle/Tests/Controller/indexControllerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ProyectoPasantias/src/AppBundle/Tests/Controller/pasanteControllerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/ProyectoPasantias/src/AppBundle/Tests/Controller/solicitudControllerTest.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/proyecto-b2-grupo-1.iml" afterPath="$PROJECT_DIR$/.idea/proyecto-b2-grupo-1.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProyectoPasantias/src/AppBundle/Entity/carrera.php" afterPath="$PROJECT_DIR$/ProyectoPasantias/src/AppBundle/Entity/carrera.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ProyectoPasantias/src/AppBundle/Entity/solicitud.php" afterPath="$PROJECT_DIR$/ProyectoPasantias/src/AppBundle/Entity/solicitud.php" />
     </list>
     <ignored path="proyecto-b2-grupo-1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,13 +25,47 @@
     <favorites_list name="proyecto-b2-grupo-1" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="parameters.yml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ProyectoPasantias/app/config/parameters.yml">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="parameters.yml.dist" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ProyectoPasantias/app/config/parameters.yml.dist">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ProyectoPasantias/app/Resources/views/carrera/index.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="carrera.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ProyectoPasantias/src/AppBundle/Entity/carrera.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="611">
+              <caret line="67" column="27" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
+              <folding>
+                <element signature="e#37#61#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="solicitud.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ProyectoPasantias/src/AppBundle/Entity/solicitud.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="31" column="68" selection-start-line="31" selection-start-column="68" selection-end-line="31" selection-end-column="68" />
+              <folding>
+                <element signature="e#36#68#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -64,6 +79,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/ProyectoPasantias/app/config/parameters.yml" />
+        <option value="$PROJECT_DIR$/ProyectoPasantias/src/AppBundle/Entity/carrera.php" />
+        <option value="$PROJECT_DIR$/ProyectoPasantias/src/AppBundle/Entity/solicitud.php" />
       </list>
     </option>
   </component>
@@ -75,10 +92,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
-    <option name="y" value="-4" />
-    <option name="width" value="959" />
-    <option name="height" value="772" />
+    <option name="x" value="57" />
+    <option name="y" value="52" />
+    <option name="width" value="772" />
+    <option name="height" value="848" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -151,6 +168,72 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="proyecto-b2-grupo-1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="proyecto-b2-grupo-1" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProyectoPasantias" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AppBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="proyecto-b2-grupo-1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="proyecto-b2-grupo-1" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProyectoPasantias" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AppBundle" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Entity" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="proyecto-b2-grupo-1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="proyecto-b2-grupo-1" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ProyectoPasantias" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -173,7 +256,11 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -184,8 +271,34 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Escritorio/Fruteria" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -200,24 +313,25 @@
       <workItem from="1500664813170" duration="773000" />
       <workItem from="1501185093954" duration="636000" />
       <workItem from="1501189689121" duration="309000" />
+      <workItem from="1501532946475" duration="3791000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1718000" />
+    <option name="totallyTimeSpent" value="5509000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="959" height="772" extended-state="6" />
+    <frame x="57" y="52" width="772" height="848" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24921794" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18782383" sideWeight="0.49548388" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18782383" sideWeight="0.5045161" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -237,11 +351,40 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ProyectoPasantias/app/config/parameters.yml">
+    <entry file="file://$PROJECT_DIR$/ProyectoPasantias/app/config/parameters.yml" />
+    <entry file="file://$PROJECT_DIR$/ProyectoPasantias/app/config/parameters.yml.dist">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProyectoPasantias/app/Resources/views/carrera/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProyectoPasantias/src/AppBundle/Entity/carrera.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="611">
+          <caret line="67" column="27" selection-start-line="67" selection-start-column="27" selection-end-line="67" selection-end-column="27" />
+          <folding>
+            <element signature="e#37#61#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ProyectoPasantias/src/AppBundle/Entity/solicitud.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="31" column="68" selection-start-line="31" selection-start-column="68" selection-end-line="31" selection-end-column="68" />
+          <folding>
+            <element signature="e#36#68#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

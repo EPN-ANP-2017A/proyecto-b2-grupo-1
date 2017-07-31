@@ -3,6 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * solicitud
@@ -27,7 +28,26 @@ class solicitud
      * @ORM\Column(name="fecha", type="datetime")
      */
     private $fecha;
+    /**
+     * @ORM\OneToMany(targetEntity="carrera", mappedBy="solicitudes")
+     */
+     private $carreras;
 
+    /**
+     * Get solicitudes
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getCarreras()
+    {
+        return $this->carreras;
+    }
+
+
+    public function __construct()
+    {
+        $this->carreras = new ArrayCollection();
+    }
 
     /**
      * Get id

@@ -2,10 +2,10 @@
 -- version 4.0.10deb1
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Jul 27, 2017 at 05:54 PM
--- Server version: 5.5.55-0ubuntu0.14.04.1
--- PHP Version: 5.5.9-1ubuntu4.21
+-- Servidor: localhost
+-- Tiempo de generación: 31-07-2017 a las 16:43:15
+-- Versión del servidor: 5.5.57-0ubuntu0.14.04.1
+-- Versión de PHP: 5.5.9-1ubuntu4.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `pasantias`
+-- Base de datos: `pasantias`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `aplicacion`
+-- Estructura de tabla para la tabla `aplicacion`
 --
 
 CREATE TABLE IF NOT EXISTS `aplicacion` (
@@ -35,19 +35,21 @@ CREATE TABLE IF NOT EXISTS `aplicacion` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `carrera`
+-- Estructura de tabla para la tabla `carrera`
 --
 
 CREATE TABLE IF NOT EXISTS `carrera` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre_carrera` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  PRIMARY KEY (`id`)
+  `solicitud_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `IDX_CF1ECD301CB9D6E4` (`solicitud_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `empresa`
+-- Estructura de tabla para la tabla `empresa`
 --
 
 CREATE TABLE IF NOT EXISTS `empresa` (
@@ -62,12 +64,20 @@ CREATE TABLE IF NOT EXISTS `empresa` (
   `ruc` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `UNIQ_B8D75A502EC7D87D` (`ruc`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
+
+--
+-- Volcado de datos para la tabla `empresa`
+--
+
+INSERT INTO `empresa` (`id`, `nombre_empresa`, `direccion_empresa`, `telefono_empresa`, `email_empresa`, `usuario`, `clave`, `requerimiento`, `ruc`) VALUES
+(1, 'JH', 'San Jose de Monjas', 987300353, 'jhcris_502@yahoo.com', 'jhcris', '123', 'Tecnologos en sistemas', 1233456791),
+(2, 'CR', 'La Tola', 2320617, 'crisis_0719@hotmail.com', 'crisis', '234', 'Ingenieros Mecanicos', 1234456789);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pasante`
+-- Estructura de tabla para la tabla `pasante`
 --
 
 CREATE TABLE IF NOT EXISTS `pasante` (
@@ -88,7 +98,7 @@ CREATE TABLE IF NOT EXISTS `pasante` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `solicitud`
+-- Estructura de tabla para la tabla `solicitud`
 --
 
 CREATE TABLE IF NOT EXISTS `solicitud` (
@@ -100,7 +110,7 @@ CREATE TABLE IF NOT EXISTS `solicitud` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `usuario`
+-- Estructura de tabla para la tabla `usuario`
 --
 
 CREATE TABLE IF NOT EXISTS `usuario` (
@@ -108,6 +118,16 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `tipo_usuario` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `carrera`
+--
+ALTER TABLE `carrera`
+  ADD CONSTRAINT `FK_CF1ECD301CB9D6E4` FOREIGN KEY (`solicitud_id`) REFERENCES `solicitud` (`id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
