@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Pasante</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ pasante.id }}</td>
+            </tr>
+            <tr>
+                <th>Nombre</th>
+                <td>{{ pasante.nombre }}</td>
+            </tr>
+            <tr>
+                <th>Apellido</th>
+                <td>{{ pasante.apellido }}</td>
+            </tr>
+            <tr>
+                <th>Cedula</th>
+                <td>{{ pasante.cedula }}</td>
+            </tr>
+            <tr>
+                <th>Especialidad</th>
+                <td>{{ pasante.especialidad }}</td>
+            </tr>
+            <tr>
+                <th>Universidad</th>
+                <td>{{ pasante.universidad }}</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>{{ pasante.email }}</td>
+            </tr>
+            <tr>
+                <th>Telefono</th>
+                <td>{{ pasante.telefono }}</td>
+            </tr>
+            <tr>
+                <th>Conocimientos</th>
+                <td>{{ pasante.conocimientos }}</td>
+            </tr>
+            <tr>
+                <th>Usuario</th>
+                <td>{{ pasante.usuario }}</td>
+            </tr>
+            <tr>
+                <th>Clave</th>
+                <td>{{ pasante.clave }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('pasante_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('pasante_edit', { 'id': pasante.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

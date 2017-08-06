@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Vacantes list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Telefono</th>
+                <th>Especialidad</th>
+                <th>Universidad</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for vacante in vacantes %}
+            <tr>
+                <td><a href="{{ path('vacante_show', { 'id': vacante.id }) }}">{{ vacante.id }}</a></td>
+                <td>{{ vacante.nombre }}</td>
+                <td>{{ vacante.apellido }}</td>
+                <td>{{ vacante.telefono }}</td>
+                <td>{{ vacante.especialidad }}</td>
+                <td>{{ vacante.universidad }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('vacante_show', { 'id': vacante.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('vacante_edit', { 'id': vacante.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('vacante_new') }}">Create a new vacante</a>
+        </li>
+    </ul>
+{% endblock %}
