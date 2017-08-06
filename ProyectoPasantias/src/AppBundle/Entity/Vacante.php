@@ -2,7 +2,9 @@
 
 namespace AppBundle\Entity;
 
+use AppBundle\AppBundle;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Vacante
@@ -56,6 +58,100 @@ class Vacante
      */
     private $universidad;
 
+    /*******************************************************************Relacion ManyToOne ********************************Varios vacantes pueden pertenecer a un area************************************************************************************************/
+
+    /**
+     *@ORM\ManyToOne(targetEntity="Area", inversedBy="vacante")
+     *@ORM\JoinColumn(name="area_id", referencedColumnName="id")
+     */
+    private $area;
+
+    /**
+     *Get area
+     *
+     *@return \AppBundle\Entity\Area
+     */
+    public function getArea()
+    {
+        return $this->area;
+    }
+
+    /**
+     *Set area
+     *
+     *@param \AppBundle\Entity\Area $area
+     *
+     *@return Area
+     */
+    public function setArea(\AppBundle\Entity\Area $area)
+    {
+        $this->area=$area;
+        return $this;
+    }
+
+    /**************************************************************************************************************************************************************************************************************************/
+
+
+    /*******************************************************************Relacion ManyToOne ********************************Varios vacantes pueden pertenecer a una empresa************************************************************************************************/
+
+    /**
+     *@ORM\ManyToOne(targetEntity="Empresa", inversedBy="vacante")
+     *@ORM\JoinColumn(name="empresa_id", referencedColumnName="id")
+     */
+    private $empresa;
+
+    /**
+     *Get empresa
+     *
+     *@return \AppBundle\Entity\Empresa
+     */
+    public function getEmpresa()
+    {
+        return $this->empresa;
+    }
+
+    /**
+     *Set empresa
+     *
+     *@param \AppBundle\Entity\Empresa $empresa
+     *
+     *@return Empresa
+     */
+    public function setEmpresa(\AppBundle\Entity\Empresa $empresa)
+    {
+        $this->empresa=$empresa;
+        return $this;
+    }
+
+    /**************************************************************************************************************************************************************************************************************************/
+
+    /*****************************************************************************Relacion OneToMany******************************* *********Un vacante pueden realizar varias aplicaciones*****************************************************************************/
+
+    /**
+     *@ORM\OneToMany(targetEntity="Aplicacion", mappedBy="vacante")
+     */
+    private $aplicacion;
+
+    /**
+     *Get aplicacion
+     *
+     *@return \Doctrine\Common\Collections\Collection
+     */
+    public function getAplicacion()
+    {
+        return $this->aplicacion;
+    }
+
+    /**
+     *Constructores
+     */
+    public function __construct()
+    {
+        $this->aplicacion=new ArrayColection();
+    }
+
+
+    /**************************************************************************************************************************************************************************************************************************/
 
     /**
      * Get id

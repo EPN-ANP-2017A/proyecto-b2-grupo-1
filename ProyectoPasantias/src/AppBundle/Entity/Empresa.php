@@ -2,7 +2,9 @@
 
 namespace AppBundle\Entity;
 
+use AppBundle\AppBundle;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Empresa
@@ -77,6 +79,43 @@ class Empresa
      */
     private $clave;
 
+
+    /***************************************************************************Relaciones OneToMany*****************************************Una empresa puede tener varios vacantes******************************************************************************************/
+
+    /**
+     *@ORM\OneToMany(targetEntity="Vacante", mappedBy="empresa")
+     */
+    private $vacante;
+
+    /**
+     *Get vacante
+     *
+     *@return \Doctrine\Common\Collections\Collection
+     */
+    public function getVacante()
+    {
+        return $this->vacante;
+    }
+
+    /**
+    *Constructores
+    */
+    public function __construct()
+    {
+        $this->vacante=new ArrayColection();
+    }
+
+
+    /**************************************************************************************************************************************************************************************************************************/
+
+
+    /*****************************************************************************Relacion OneToOne **************************** Una empresa le pertenece a un usuario****************************************************************************************/
+    
+      /**
+       * @ORM\OneToOne(targetEntity="User", inversedBy="empresa")
+       */
+      private $user;
+    /**************************************************************************************************************************************************************************************************************************/
 
     /**
      * Get id

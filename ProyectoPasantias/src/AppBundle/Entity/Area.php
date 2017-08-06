@@ -3,6 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Area
@@ -52,6 +53,35 @@ class Area
 
         return $this;
     }
+
+    /***********************************************************************RelacionesOneToMany****************************** Un area pertenece a varios vacante*********************************************************************************************************/
+
+    /**
+     *@ORM\OneToMany(targetEntity="Vacante", mappedBy="area")
+     */
+    private $vacante;
+
+    /**
+     *Get vacante
+     *
+     *@return \Doctrine\Common\Collections\Collection
+     */
+    public function getVacante()
+    {
+        return $this->vacante;
+    }
+
+    /**
+    *Constructores
+    */
+    public function __construct()
+    {
+        $this->vacante=new ArrayColection();
+    }
+
+
+    /**************************************************************************************************************************************************************************************************************************/
+
 
     /**
      * Get nombre

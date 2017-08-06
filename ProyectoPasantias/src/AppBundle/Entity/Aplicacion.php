@@ -2,7 +2,9 @@
 
 namespace AppBundle\Entity;
 
+use AppBundle\AppBundle;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Aplicacion
@@ -34,6 +36,40 @@ class Aplicacion
      * @ORM\Column(name="fecha", type="datetime")
      */
     private $fecha;
+
+    /*******************************************************************************Relacion ManyToOne*********************** ********************Varias aplicaciones pertenecen a una vacante*********************************************************************************/
+
+    /**
+     *@ORM\ManyToOne(targetEntity="Vacante", inversedBy="aplicacion")
+     *@ORM\JoinColumn(name="vacante_id", referencedColumnName="id")
+     */
+    private $vacante;
+
+    /**
+     *Get vacante
+     *
+     *@return \AppBundle\Entity\Vacante
+     */
+    public function getVacante()
+    {
+        return $this->vacante;
+    }
+
+    /**
+     *Set vacante
+     *
+     *@param \AppBundle\Entity\Vacante $vacante
+     *
+     *@return Vacante
+     */
+    public function setVacante(\AppBundle\Entity\Vacante $vacante)
+    {
+        $this->vacante=$vacante;
+        return $this;
+    }
+
+
+    /**************************************************************************************************************************************************************************************************************************/
 
 
     /**
