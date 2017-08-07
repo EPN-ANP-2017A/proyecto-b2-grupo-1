@@ -1,0 +1,39 @@
+article p {
+	padding: 10px;
+	text-align: justify;
+}
+
+.img-art-wrap {
+	position: relative;
+	text-align: center;
+}
+
+
+.img-art-wrap p {
+	padding: 10px;
+	background-color: #4c4b00;
+	color: #FFF;
+	text-transform: uppercase;
+	font-size: 22px;
+	position: absolute;
+	bottom: 0px;
+	margin: 0px;
+	width: 100%;
+}
+
+.parallax1 {
+	background-image: url("../imagen/fondo1.1.jpg");
+	margin-top: 50px;
+}
+
+.parallax2 {
+	background-image: url("../imagen/f1.2.jpg");
+}
+
+.parallax3 {
+	background-image: url("../imagen/f1.3.jpg");
+}
+
+header{
+	position: relative;
+}
