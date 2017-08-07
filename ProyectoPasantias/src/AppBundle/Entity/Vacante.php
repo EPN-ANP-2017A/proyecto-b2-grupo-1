@@ -145,7 +145,7 @@ class Vacante
     /**
      *Constructores
      */
-    public function __construct()
+    public function __construct6()
     {
         $this->aplicacion=new ArrayColection();
     }

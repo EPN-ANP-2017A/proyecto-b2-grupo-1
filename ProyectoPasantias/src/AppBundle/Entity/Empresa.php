@@ -100,7 +100,7 @@ class Empresa
     /**
     *Constructores
     */
-    public function __construct()
+    public function __construct3()
     {
         $this->vacante=new ArrayColection();
     }

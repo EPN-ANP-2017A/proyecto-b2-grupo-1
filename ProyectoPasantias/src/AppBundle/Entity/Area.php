@@ -74,7 +74,7 @@ class Area
     /**
     *Constructores
     */
-    public function __construct()
+    public function __construct2()
     {
         $this->vacante=new ArrayColection();
     }
